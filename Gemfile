@@ -35,12 +35,13 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   # Use sqlite3 as the database for Active Record
 	gem 'sqlite3'
-  gem 'rspec-rails', '2.13.1'
+  gem 'rspec-rails', '3.8.0'
+  gem 'test-unit'
 end
 
 group :text do
 	gem 'selenium-webdriver', '2.35.1'
-	gem 'capybara', '2.1.0'
+	gem 'capybara', '3.8.2'
 end
 
 group :doc do
