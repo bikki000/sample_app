@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   before_action :signed_in_user, only: [:edit, :update]
   before_action :correct_user,   only: [:edit, :update, :destroy]
   before_action :admin_user,     only: :destroy
+  after_action :details
 
   def index
     @users = User.paginate(page: params[:page])
@@ -25,6 +26,10 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @microposts = @user.microposts.paginate(page: params[:page])
+    respond_to do |format|
+      format.html
+      format.pdf {render rb: send_this and return}
+    end
   end
 
   def edit
@@ -77,6 +82,24 @@ class UsersController < ApplicationController
 
   def admin_user
     redirect_to(root_url) unless current_user.admin?
+  end
+
+  def details
+    puts "request"
+    puts "Host      : #{request.host}"
+    puts "Domain    : #{request.domain(1)}"
+    puts "Format    : #{request.format}"
+    puts "Method    : #{request.method}"
+    puts "IP        : #{request.remote_ip}"
+    puts "URL       : #{request.url}"
+    puts "\nResponse"
+    puts "Location  : #{response.location}"
+    puts "Status    : #{response.status}"
+  end
+
+  def send_this
+    # send_file("#{Rails.root}/config/routes.rb", filename: "routes.rb", type: "text/ruby")
+    File.read("#{Rails.root}/config/routes.rb")
   end
 
 end
