@@ -24,6 +24,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    # binding.pry
     @user = User.find(params[:id])
     @microposts = @user.microposts.paginate(page: params[:page])
     respond_to do |format|
