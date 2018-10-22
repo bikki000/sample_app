@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
-  resources :users do
+  resources :users, except: [:create] do
+    post "create" => "users#create", as: :create, path: "new", on: :collection
     member do
       get :following, :followers
     end
   end
-  resources :sessions,      only: [:new, :create, :destroy]
+  resources :sessions,      only: [:new, :destroy] do
+    post "create" => "sessions#create", as: :create, path: "new", on: :collection
+  end
   resources :microposts,    only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]
 
@@ -14,7 +17,7 @@ Rails.application.routes.draw do
   match '/about',   to: 'static_pages#about',           via: 'get'
   match '/contact', to: 'static_pages#contact',         via: 'get'
 
-  match '/signup',  to: 'users#new',                    via: 'get'
+  # match '/signup',  to: 'users#new',                    via: 'get'
 
   match '/signin',  to: 'sessions#new',                 via: 'get'
   match '/signout', to: 'sessions#destroy',             via: 'delete'
