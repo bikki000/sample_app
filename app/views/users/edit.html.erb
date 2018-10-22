@@ -10,18 +10,22 @@
 			<div class="form-group">
 				<%= form.label :name, class: "control-label" %>
 				<%= form.text_field :name, class: "form-control" %>
+				<%= render "shared/error", locals: { field: :name } %>
 			</div>
 			<div class="form-group">
 				<%= form.label :email, class: "control-label" %>
 				<%= form.text_field :email, class: "form-control" %>
+				<%= render "shared/error", locals: { field: :email } %>
 			</div>
 			<div class="form-group">
 				<%= form.label :password, class: "control-label" %>
 				<%= form.password_field :password, class: "form-control" %>
+				<%= render "shared/error", locals: { field: :password } %>
 			</div>
 			<div class="form-group">
 				<%= form.label :password_confirmation, class: "control-label" %>
 				<%= form.password_field :password_confirmation, class: "form-control" %>
+				<%= render "shared/error", locals: { field: :password_confirmation } %>
 			</div>
 			<div class="form-group">
 				<%= form.submit "Save Changes", class: "btn btn-primary btn-large" %>

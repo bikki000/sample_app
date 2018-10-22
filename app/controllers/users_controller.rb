@@ -1,8 +1,7 @@
 class UsersController < ApplicationController
-  before_action :signed_in_user, only: [:edit, :update]
-  before_action :correct_user,   only: [:edit, :update, :destroy]
-  before_action :admin_user,     only: :destroy
-  after_action :details
+  before_action :signed_in_user,  only: [:index, :edit, :update, :destroy]
+  before_action :correct_user,    only: [:edit, :update]
+  before_action :admin_user,      only: :destroy
 
   def index
     @users = User.paginate(page: params[:page])
@@ -13,7 +12,7 @@ class UsersController < ApplicationController
   end
 
   def create
-  	@user = User.new(user_params)
+  	@user = User.new(new_user_params)
   	if @user.save
       sign_in @user
   		flash[:success] = "Welcome to the Sample App!"
@@ -27,10 +26,6 @@ class UsersController < ApplicationController
     # binding.pry
     @user = User.find(params[:id])
     @microposts = @user.microposts.paginate(page: params[:page])
-    respond_to do |format|
-      format.html
-      format.pdf {render rb: send_this and return}
-    end
   end
 
   def edit
@@ -39,7 +34,7 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    if @user.update_attributes(user_params)
+    if @user.update_attributes(update_user_params)
       flash[:success] = "Profile update"
       redirect_to @user
     else
@@ -50,7 +45,7 @@ class UsersController < ApplicationController
   def destroy
     User.find(params[:id]).destroy
     flash[:success] = "User Deleted"
-    redirect_to users_url
+    redirect_to :back
   end
 
   def following
@@ -68,7 +63,10 @@ class UsersController < ApplicationController
   end
 
   private
-  def user_params
+  def new_user_params
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, :date_of_birth)
+  end
+  def update_user_params
   	params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 
@@ -82,25 +80,14 @@ class UsersController < ApplicationController
   end
 
   def admin_user
-    redirect_to(root_url) unless current_user.admin?
-  end
-
-  def details
-    puts "request"
-    puts "Host      : #{request.host}"
-    puts "Domain    : #{request.domain(1)}"
-    puts "Format    : #{request.format}"
-    puts "Method    : #{request.method}"
-    puts "IP        : #{request.remote_ip}"
-    puts "URL       : #{request.url}"
-    puts "\nResponse"
-    puts "Location  : #{response.location}"
-    puts "Status    : #{response.status}"
-  end
-
-  def send_this
-    # send_file("#{Rails.root}/config/routes.rb", filename: "routes.rb", type: "text/ruby")
-    File.read("#{Rails.root}/config/routes.rb")
+    redirect_to :back unless current_user.admin?
+    if current_user.id == params[:id].to_i
+      flash[:danger] = "Can not delete your own account"
+      redirect_to :back
+    elsif User.find_by(id: params[:id]).admin?
+      flash[:danger] = "Can not delete account of an admin"
+      redirect_to :back
+    end
   end
 
 end

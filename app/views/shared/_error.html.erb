@@ -1,0 +1,8 @@
+<% if @user.errors.any? %>
+	<div style="color:red; padding-left:15px" >
+		<% error = @user.errors[locals[:field]].first %>
+		<% unless error.blank? %>
+			<%= "#{locals[:field]} #{error}" %>
+		<% end %>
+	</div>
+<% end %>

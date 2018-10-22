@@ -73,6 +73,8 @@ class User < ActiveRecord::Base
 	has_secure_password
 	validates :password, length: {minimum: 6}
 
+	validate :minimum_age 
+
 	def self.new_remember_token
 		SecureRandom.urlsafe_base64
 	end
@@ -104,6 +106,15 @@ class User < ActiveRecord::Base
 	private
 	def create_remember_token
 		self.remember_token = User.digest(User.new_remember_token)
+	end
+
+	def minimum_age
+		unless date_of_birth.present?
+			errors.add(:date_of_birth, "must be present")
+		end
+		if date_of_birth > Date.today - 18.year
+			errors.add(:date_of_birth, "must be 18 years in past")
+		end
 	end
 	
 end

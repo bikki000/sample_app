@@ -8,21 +8,31 @@
 			<div class="form-group">
 				<%= form.label :name %>
 				<%= form.text_field :name, class: "form-control" %>
+				<%= render "shared/error", locals: { field: :name } %>
 			</div>
 
 			<div class="form-group">
 				<%= form.label :email %>
 				<%= form.text_field :email, class: "form-control"  %>
+				<%= render "shared/error", locals: { field: :email } %>
 			</div>
 
 			<div class="form-group">
 				<%= form.label :password %>
 				<%= form.password_field :password, class: "form-control"  %>
+				<%= render "shared/error", locals: { field: :password } %>
 			</div>
 
 			<div class="form-group">
 				<%= form.label :password_confirmation, "Confirmation" %>
 				<%= form.password_field :password_confirmation, class: "form-control"  %>
+				<%= render "shared/error", locals: { field: :password_confirmation } %>
+			</div>
+
+			<div class="form-group">
+				<%= form.label :date_of_birth %>
+				<%= form.date_field :date_of_birth, class: "form-control", value: (Date.today - 18.year).to_s %>
+				<%= render "shared/error", locals: { field: :date_of_birth } %>
 			</div>
 
 			<div class="form-group">

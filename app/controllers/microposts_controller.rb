@@ -18,7 +18,7 @@ class MicropostsController < ApplicationController
 
 	def destroy
 		@micropost.destroy
-		redirect_to @micropost.user
+		redirect_to :back
 	end
 
 	private
@@ -27,6 +27,9 @@ class MicropostsController < ApplicationController
 	end
 	def correct_user
 		@micropost = current_user.microposts.find_by(id: params[:id])
-		redirect_to root_url if @micropost.nil?
+		if @micropost.nil?
+			flash[:danger] = "You can delete your microposts only"
+			redirect_to root_url
+		end
 	end
 end
