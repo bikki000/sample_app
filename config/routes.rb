@@ -1,16 +1,4 @@
 Rails.application.routes.draw do
-  resources :users, except: [:create] do
-    post "create" => "users#create", as: :create, path: "new", on: :collection
-    member do
-      get :following, :followers
-    end
-  end
-  resources :sessions,      only: [:new, :destroy] do
-    post "create" => "sessions#create", as: :create, path: "new", on: :collection
-  end
-  resources :microposts,    only: [:create, :destroy]
-  resources :relationships, only: [:create, :destroy]
-
   root 'static_pages#home'
 
   match '/help',    to: 'static_pages#help',            via: 'get'
@@ -24,6 +12,25 @@ Rails.application.routes.draw do
 
   match '/404',     to: 'errors#not_found',             via: :all
   match '/500',     to: 'errors#internal_server_error', via: :all
+  
+  resources :users, except: [:create] do
+    member do
+      get :following, :followers
+    end
+    collection do
+      post "create", to: "users#create", as: :create
+    end
+  end
+  resources :sessions,      only: [:new, :destroy] do
+    post "create" => "sessions#create", as: :create, path: "new", on: :collection
+  end
+  # resources :microposts,    only: [:create, :destroy]
+  post "microposts" => "microposts#create", as: :microposts, path: "/(.:format)"
+  delete "microposts" => "microposts#destroy", as: :micropost, path: "/:id(.:format)"
+
+  resources :relationships, only: [:create, :destroy]
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
