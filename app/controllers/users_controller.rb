@@ -26,6 +26,12 @@ class UsersController < ApplicationController
     # binding.pry
     @user = User.find(params[:id])
     @microposts = @user.microposts.paginate(page: params[:page])
+    respond_to do |format|
+      format.html
+      format.json do
+        render json: @user
+      end
+    end
   end
 
   def edit
