@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 20181017120421) do
     t.string   "password_digest"
     t.string   "remember_token"
     t.boolean  "admin",           default: false
-    t.date     "date_of_birth",   default: '2000-10-23'
+    t.date     "date_of_birth",   default: '2000-10-24'
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

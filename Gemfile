@@ -28,6 +28,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'faker'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
+gem 'pubnub'
 # Use Unicorn as the app server
 # gem 'unicorn'
 

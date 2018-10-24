@@ -4,34 +4,8 @@
 
 <div class="row">
 	<div class="col-sm-6 col-sm-offset-3">
-		<%= form_for(@user) do |form| %>
-			<%#= render 'shared/error_messages', object: form.object %>
-
-			<div class="form-group">
-				<%= form.label :name, class: "control-label" %>
-				<%= form.text_field :name, class: "form-control" %>
-				<%= render "shared/error", locals: { field: :name } %>
-			</div>
-			<div class="form-group">
-				<%= form.label :email, class: "control-label" %>
-				<%= form.text_field :email, class: "form-control" %>
-				<%= render "shared/error", locals: { field: :email } %>
-			</div>
-			<div class="form-group">
-				<%= form.label :password, class: "control-label" %>
-				<%= form.password_field :password, class: "form-control" %>
-				<%= render "shared/error", locals: { field: :password } %>
-			</div>
-			<div class="form-group">
-				<%= form.label :password_confirmation, class: "control-label" %>
-				<%= form.password_field :password_confirmation, class: "form-control" %>
-				<%= render "shared/error", locals: { field: :password_confirmation } %>
-			</div>
-			<div class="form-group">
-				<%= form.submit "Save Changes", class: "btn btn-primary btn-large" %>
-			</div>
-		<% end %>
+		<%= render 'form', options: {action: 'update'} %>
 		<%= gravatar_for @user %>
-		<a href="https://gravatar.com/emails">Change</a>
+		<a href="https://gravatar.com/emails" target="_blank">Change</a>
 	</div>
 </div>

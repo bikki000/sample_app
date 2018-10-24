@@ -1,0 +1,569 @@
+# Logfile created on 2018-10-24 12:44:32 +0530 by logger.rb/61378
+D, [2018-10-24T12:44:32.596743 #7956] DEBUG -- Pubnub::Telementry: Initialized Telemetry
+D, [2018-10-24T12:44:32.613603 #7956] DEBUG -- Pubnub::Client: Created new Pubnub::Client instance. Version: 4.0.28
+D, [2018-10-24T13:19:46.250191 #9591] DEBUG -- Pubnub::Telementry: Initialized Telemetry
+D, [2018-10-24T13:19:46.269521 #9591] DEBUG -- Pubnub::Client: Created new Pubnub::Client instance. Version: 4.0.28
+D, [2018-10-24T13:19:55.721469 #9591] DEBUG -- Pubnub::Telemetry: Fetching telemetry for l_pub
+D, [2018-10-24T13:19:55.721791 #9591] DEBUG -- Pubnub::Event: Initialized Pubnub::Publish
+D, [2018-10-24T13:19:55.723281 #9591] DEBUG -- Pubnub::Publish: Fired event Pubnub::Publish
+D, [2018-10-24T13:19:55.723794 #9591] DEBUG -- Pubnub::Event: #send_request called
+D, [2018-10-24T13:19:55.725696 #9591] DEBUG -- Pubnub::SingleEvent: #request_dispatcher called
+D, [2018-10-24T13:19:55.725805 #9591] DEBUG -- Pubnub::Client: Looking for requester for async single_event
+D, [2018-10-24T13:19:55.726178 #9591] DEBUG -- Pubnub::Event: #send_request got sender
+D, [2018-10-24T13:19:55.726483 #9591] DEBUG -- Pubnub::Event: Requested URI: http://ps.pndsn.com/publish/example/example/0/posts_1/0/%22hello%22?ortt=%7B%22t%22%3A15403673957219148%7D&pnsdk=PubNub-Ruby%2F4.0.28&seqn=1&uuid=a3c12b39-6924-4952-b0e0-1bed455cb1c0
+E, [2018-10-24T13:20:05.880775 #9591] ERROR -- Pubnub::Event: execution expired (HTTPClient::ReceiveTimeoutError)
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:805:in `gets'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:805:in `block in parse_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/2.5.0/timeout.rb:103:in `timeout'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:801:in `parse_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:784:in `read_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:561:in `get_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1299:in `do_get_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1245:in `do_get_block'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1019:in `block in do_request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1133:in `protect_keep_alive_disconnected'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1014:in `do_request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:856:in `request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:743:in `get'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pubnub-4.0.28/lib/pubnub/event.rb:56:in `send_request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pubnub-4.0.28/lib/pubnub/events/publish.rb:33:in `fire'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pubnub-4.0.28/lib/pubnub/client/events.rb:23:in `block (3 levels) in <module:Events>'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/synchronization/mri_lockable_object.rb:38:in `block in synchronize'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/synchronization/mri_lockable_object.rb:38:in `synchronize'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/synchronization/mri_lockable_object.rb:38:in `synchronize'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/safe_task_executor.rb:19:in `execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/ivar.rb:170:in `safe_execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/future.rb:52:in `block in execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+D, [2018-10-24T13:20:05.881035 #9591] DEBUG -- Pubnub::Event: Event#handle
+D, [2018-10-24T13:20:05.881290 #9591] DEBUG -- Pubnub::Event: Firing callbacks for Pubnub::Publish
+D, [2018-10-24T13:23:08.824346 #9591] DEBUG -- Pubnub::Telemetry: Fetching telemetry for l_pub
+D, [2018-10-24T13:23:08.824699 #9591] DEBUG -- Pubnub::Event: Initialized Pubnub::Publish
+D, [2018-10-24T13:23:08.825011 #9591] DEBUG -- Pubnub::Publish: Fired event Pubnub::Publish
+D, [2018-10-24T13:23:08.825658 #9591] DEBUG -- Pubnub::Event: #send_request called
+D, [2018-10-24T13:23:08.826064 #9591] DEBUG -- Pubnub::SingleEvent: #request_dispatcher called
+D, [2018-10-24T13:23:08.827482 #9591] DEBUG -- Pubnub::Client: Looking for requester for async single_event
+D, [2018-10-24T13:23:08.827547 #9591] DEBUG -- Pubnub::Event: #send_request got sender
+D, [2018-10-24T13:23:08.827834 #9591] DEBUG -- Pubnub::Event: Requested URI: http://ps.pndsn.com/publish/example/example/0/posts_1/0/%22good%20morning%22?ortt=%7B%22t%22%3A15403675888247848%7D&pnsdk=PubNub-Ruby%2F4.0.28&seqn=2&uuid=a3c12b39-6924-4952-b0e0-1bed455cb1c0
+E, [2018-10-24T13:23:24.107141 #9591] ERROR -- Pubnub::Event: execution expired (HTTPClient::ReceiveTimeoutError)
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:805:in `gets'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:805:in `block in parse_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/2.5.0/timeout.rb:103:in `timeout'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:801:in `parse_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:784:in `read_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:561:in `get_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1299:in `do_get_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1245:in `do_get_block'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1019:in `block in do_request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1133:in `protect_keep_alive_disconnected'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1014:in `do_request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:856:in `request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:743:in `get'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pubnub-4.0.28/lib/pubnub/event.rb:56:in `send_request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pubnub-4.0.28/lib/pubnub/events/publish.rb:33:in `fire'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pubnub-4.0.28/lib/pubnub/client/events.rb:23:in `block (3 levels) in <module:Events>'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/synchronization/mri_lockable_object.rb:38:in `block in synchronize'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/synchronization/mri_lockable_object.rb:38:in `synchronize'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/synchronization/mri_lockable_object.rb:38:in `synchronize'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/safe_task_executor.rb:19:in `execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/ivar.rb:170:in `safe_execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/future.rb:52:in `block in execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+D, [2018-10-24T13:23:24.107416 #9591] DEBUG -- Pubnub::Event: Event#handle
+D, [2018-10-24T13:23:24.107644 #9591] DEBUG -- Pubnub::Event: Firing callbacks for Pubnub::Publish
+D, [2018-10-24T13:24:25.059090 #9591] DEBUG -- Pubnub::Telemetry: Fetching telemetry for l_pub
+D, [2018-10-24T13:24:25.059350 #9591] DEBUG -- Pubnub::Event: Initialized Pubnub::Publish
+D, [2018-10-24T13:24:25.059583 #9591] DEBUG -- Pubnub::Publish: Fired event Pubnub::Publish
+D, [2018-10-24T13:24:25.060083 #9591] DEBUG -- Pubnub::Event: #send_request called
+D, [2018-10-24T13:24:25.060405 #9591] DEBUG -- Pubnub::SingleEvent: #request_dispatcher called
+D, [2018-10-24T13:24:25.061451 #9591] DEBUG -- Pubnub::Client: Looking for requester for async single_event
+D, [2018-10-24T13:24:25.061768 #9591] DEBUG -- Pubnub::Event: #send_request got sender
+D, [2018-10-24T13:24:25.062098 #9591] DEBUG -- Pubnub::Event: Requested URI: http://ps.pndsn.com/publish/example/example/0/posts_1/0/%22good%20night%20to%20all%22?ortt=%7B%22t%22%3A15403676650594382%7D&pnsdk=PubNub-Ruby%2F4.0.28&seqn=3&uuid=a3c12b39-6924-4952-b0e0-1bed455cb1c0
+E, [2018-10-24T13:24:35.244519 #9591] ERROR -- Pubnub::Event: execution expired (HTTPClient::ReceiveTimeoutError)
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:805:in `gets'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:805:in `block in parse_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/2.5.0/timeout.rb:103:in `timeout'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:801:in `parse_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:784:in `read_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:561:in `get_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1299:in `do_get_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1245:in `do_get_block'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1019:in `block in do_request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1133:in `protect_keep_alive_disconnected'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1014:in `do_request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:856:in `request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:743:in `get'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pubnub-4.0.28/lib/pubnub/event.rb:56:in `send_request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pubnub-4.0.28/lib/pubnub/events/publish.rb:33:in `fire'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pubnub-4.0.28/lib/pubnub/client/events.rb:23:in `block (3 levels) in <module:Events>'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/synchronization/mri_lockable_object.rb:38:in `block in synchronize'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/synchronization/mri_lockable_object.rb:38:in `synchronize'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/synchronization/mri_lockable_object.rb:38:in `synchronize'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/safe_task_executor.rb:19:in `execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/ivar.rb:170:in `safe_execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/future.rb:52:in `block in execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+D, [2018-10-24T13:24:35.244794 #9591] DEBUG -- Pubnub::Event: Event#handle
+D, [2018-10-24T13:24:35.244975 #9591] DEBUG -- Pubnub::Event: Firing callbacks for Pubnub::Publish
+D, [2018-10-24T13:24:48.851387 #9591] DEBUG -- Pubnub::Telemetry: Fetching telemetry for l_pub
+D, [2018-10-24T13:24:48.851709 #9591] DEBUG -- Pubnub::Event: Initialized Pubnub::Publish
+D, [2018-10-24T13:24:48.851939 #9591] DEBUG -- Pubnub::Publish: Fired event Pubnub::Publish
+D, [2018-10-24T13:24:48.852406 #9591] DEBUG -- Pubnub::Event: #send_request called
+D, [2018-10-24T13:24:48.852734 #9591] DEBUG -- Pubnub::SingleEvent: #request_dispatcher called
+D, [2018-10-24T13:24:48.853645 #9591] DEBUG -- Pubnub::Client: Looking for requester for async single_event
+D, [2018-10-24T13:24:48.853805 #9591] DEBUG -- Pubnub::Event: #send_request got sender
+D, [2018-10-24T13:24:48.854217 #9591] DEBUG -- Pubnub::Event: Requested URI: http://ps.pndsn.com/publish/example/example/0/posts_100/0/%22hello%5Cr%5Cn%22?ortt=%7B%22t%22%3A15403676888517596%7D&pnsdk=PubNub-Ruby%2F4.0.28&seqn=4&uuid=a3c12b39-6924-4952-b0e0-1bed455cb1c0
+E, [2018-10-24T13:24:58.960972 #9591] ERROR -- Pubnub::Event: execution expired (HTTPClient::ReceiveTimeoutError)
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:805:in `gets'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:805:in `block in parse_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/2.5.0/timeout.rb:103:in `timeout'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:801:in `parse_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:784:in `read_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:561:in `get_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1299:in `do_get_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1245:in `do_get_block'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1019:in `block in do_request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1133:in `protect_keep_alive_disconnected'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1014:in `do_request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:856:in `request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:743:in `get'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pubnub-4.0.28/lib/pubnub/event.rb:56:in `send_request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pubnub-4.0.28/lib/pubnub/events/publish.rb:33:in `fire'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pubnub-4.0.28/lib/pubnub/client/events.rb:23:in `block (3 levels) in <module:Events>'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/synchronization/mri_lockable_object.rb:38:in `block in synchronize'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/synchronization/mri_lockable_object.rb:38:in `synchronize'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/synchronization/mri_lockable_object.rb:38:in `synchronize'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/safe_task_executor.rb:19:in `execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/ivar.rb:170:in `safe_execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/future.rb:52:in `block in execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+D, [2018-10-24T13:24:58.961270 #9591] DEBUG -- Pubnub::Event: Event#handle
+D, [2018-10-24T13:24:58.961431 #9591] DEBUG -- Pubnub::Event: Firing callbacks for Pubnub::Publish
+D, [2018-10-24T13:31:06.310645 #10014] DEBUG -- Pubnub::Telementry: Initialized Telemetry
+D, [2018-10-24T13:31:06.329532 #10014] DEBUG -- Pubnub::Client: Created new Pubnub::Client instance. Version: 4.0.28
+D, [2018-10-24T14:14:29.810674 #9591] DEBUG -- Pubnub::Telemetry: Fetching telemetry for l_pub
+D, [2018-10-24T14:14:29.810966 #9591] DEBUG -- Pubnub::Event: Initialized Pubnub::Publish
+D, [2018-10-24T14:14:29.811271 #9591] DEBUG -- Pubnub::Publish: Fired event Pubnub::Publish
+D, [2018-10-24T14:14:29.811328 #9591] DEBUG -- Pubnub::Event: #send_request called
+D, [2018-10-24T14:14:29.811847 #9591] DEBUG -- Pubnub::SingleEvent: #request_dispatcher called
+D, [2018-10-24T14:14:29.811907 #9591] DEBUG -- Pubnub::Client: Looking for requester for async single_event
+D, [2018-10-24T14:14:29.811984 #9591] DEBUG -- Pubnub::Event: #send_request got sender
+D, [2018-10-24T14:14:29.812543 #9591] DEBUG -- Pubnub::Event: Requested URI: http://ps.pndsn.com/publish/example/example/0/posts_1/0/%7B%22content%22%3A%22good%20day%22%7D?ortt=%7B%22t%22%3A15403706698110850%7D&pnsdk=PubNub-Ruby%2F4.0.28&seqn=5&uuid=a3c12b39-6924-4952-b0e0-1bed455cb1c0
+E, [2018-10-24T14:14:39.967764 #9591] ERROR -- Pubnub::Event: execution expired (HTTPClient::ReceiveTimeoutError)
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:805:in `gets'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:805:in `block in parse_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/2.5.0/timeout.rb:103:in `timeout'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:801:in `parse_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:784:in `read_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:561:in `get_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1299:in `do_get_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1245:in `do_get_block'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1019:in `block in do_request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1133:in `protect_keep_alive_disconnected'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1014:in `do_request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:856:in `request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:743:in `get'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pubnub-4.0.28/lib/pubnub/event.rb:56:in `send_request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pubnub-4.0.28/lib/pubnub/events/publish.rb:33:in `fire'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pubnub-4.0.28/lib/pubnub/client/events.rb:23:in `block (3 levels) in <module:Events>'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/synchronization/mri_lockable_object.rb:38:in `block in synchronize'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/synchronization/mri_lockable_object.rb:38:in `synchronize'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/synchronization/mri_lockable_object.rb:38:in `synchronize'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/safe_task_executor.rb:19:in `execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/ivar.rb:170:in `safe_execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/future.rb:52:in `block in execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+D, [2018-10-24T14:14:39.968028 #9591] DEBUG -- Pubnub::Event: Event#handle
+D, [2018-10-24T14:14:39.968211 #9591] DEBUG -- Pubnub::Event: Firing callbacks for Pubnub::Publish
+D, [2018-10-24T14:35:15.446827 #9591] DEBUG -- Pubnub::Telemetry: Fetching telemetry for l_pub
+D, [2018-10-24T14:35:15.448624 #9591] DEBUG -- Pubnub::Event: Initialized Pubnub::Publish
+D, [2018-10-24T14:35:15.453135 #9591] DEBUG -- Pubnub::Publish: Fired event Pubnub::Publish
+D, [2018-10-24T14:35:15.453698 #9591] DEBUG -- Pubnub::Event: #send_request called
+D, [2018-10-24T14:35:15.454328 #9591] DEBUG -- Pubnub::SingleEvent: #request_dispatcher called
+D, [2018-10-24T14:35:15.455145 #9591] DEBUG -- Pubnub::Client: Looking for requester for async single_event
+D, [2018-10-24T14:35:15.456091 #9591] DEBUG -- Pubnub::Event: #send_request got sender
+D, [2018-10-24T14:35:15.482562 #9591] DEBUG -- Pubnub::Event: Requested URI: http://ps.pndsn.com/publish/example/example/0/posts_1/0/%7B%22content%22%3A%22hello%20agin%22%7D?ortt=%7B%22t%22%3A15403719154489122%7D&pnsdk=PubNub-Ruby%2F4.0.28&seqn=6&uuid=a3c12b39-6924-4952-b0e0-1bed455cb1c0
+E, [2018-10-24T14:35:25.697269 #9591] ERROR -- Pubnub::Event: execution expired (HTTPClient::ReceiveTimeoutError)
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:805:in `gets'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:805:in `block in parse_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/2.5.0/timeout.rb:103:in `timeout'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:801:in `parse_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:784:in `read_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:561:in `get_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1299:in `do_get_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1245:in `do_get_block'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1019:in `block in do_request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1133:in `protect_keep_alive_disconnected'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1014:in `do_request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:856:in `request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:743:in `get'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pubnub-4.0.28/lib/pubnub/event.rb:56:in `send_request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pubnub-4.0.28/lib/pubnub/events/publish.rb:33:in `fire'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pubnub-4.0.28/lib/pubnub/client/events.rb:23:in `block (3 levels) in <module:Events>'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/synchronization/mri_lockable_object.rb:38:in `block in synchronize'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/synchronization/mri_lockable_object.rb:38:in `synchronize'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/synchronization/mri_lockable_object.rb:38:in `synchronize'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/safe_task_executor.rb:19:in `execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/ivar.rb:170:in `safe_execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/future.rb:52:in `block in execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+D, [2018-10-24T14:35:25.698193 #9591] DEBUG -- Pubnub::Event: Event#handle
+D, [2018-10-24T14:35:25.699223 #9591] DEBUG -- Pubnub::Event: Firing callbacks for Pubnub::Publish
+D, [2018-10-24T14:37:00.500527 #9591] DEBUG -- Pubnub::Telemetry: Fetching telemetry for l_pub
+D, [2018-10-24T14:37:00.502482 #9591] DEBUG -- Pubnub::Event: Initialized Pubnub::Publish
+D, [2018-10-24T14:37:00.508455 #9591] DEBUG -- Pubnub::Publish: Fired event Pubnub::Publish
+D, [2018-10-24T14:37:00.508968 #9591] DEBUG -- Pubnub::Event: #send_request called
+D, [2018-10-24T14:37:00.509344 #9591] DEBUG -- Pubnub::SingleEvent: #request_dispatcher called
+D, [2018-10-24T14:37:00.523376 #9591] DEBUG -- Pubnub::Client: Looking for requester for async single_event
+D, [2018-10-24T14:37:00.523898 #9591] DEBUG -- Pubnub::Event: #send_request got sender
+D, [2018-10-24T14:37:00.526976 #9591] DEBUG -- Pubnub::Event: Requested URI: http://ps.pndsn.com/publish/example/example/0/posts_1/0/%7B%22content%22%3A%22ok%20here%20comes%20the%20error%22%7D?ortt=%7B%22t%22%3A15403720205028124%7D&pnsdk=PubNub-Ruby%2F4.0.28&seqn=7&uuid=a3c12b39-6924-4952-b0e0-1bed455cb1c0
+E, [2018-10-24T14:37:10.698452 #9591] ERROR -- Pubnub::Event: execution expired (HTTPClient::ReceiveTimeoutError)
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:805:in `gets'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:805:in `block in parse_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/2.5.0/timeout.rb:103:in `timeout'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:801:in `parse_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:784:in `read_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:561:in `get_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1299:in `do_get_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1245:in `do_get_block'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1019:in `block in do_request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1133:in `protect_keep_alive_disconnected'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1014:in `do_request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:856:in `request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:743:in `get'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pubnub-4.0.28/lib/pubnub/event.rb:56:in `send_request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pubnub-4.0.28/lib/pubnub/events/publish.rb:33:in `fire'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pubnub-4.0.28/lib/pubnub/client/events.rb:23:in `block (3 levels) in <module:Events>'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/synchronization/mri_lockable_object.rb:38:in `block in synchronize'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/synchronization/mri_lockable_object.rb:38:in `synchronize'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/synchronization/mri_lockable_object.rb:38:in `synchronize'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/safe_task_executor.rb:19:in `execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/ivar.rb:170:in `safe_execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/future.rb:52:in `block in execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+D, [2018-10-24T14:37:10.699251 #9591] DEBUG -- Pubnub::Event: Event#handle
+D, [2018-10-24T14:37:10.700236 #9591] DEBUG -- Pubnub::Event: Firing callbacks for Pubnub::Publish
+D, [2018-10-24T14:39:34.616301 #9591] DEBUG -- Pubnub::Telemetry: Fetching telemetry for l_pub
+D, [2018-10-24T14:39:34.616627 #9591] DEBUG -- Pubnub::Event: Initialized Pubnub::Publish
+D, [2018-10-24T14:39:34.617190 #9591] DEBUG -- Pubnub::Publish: Fired event Pubnub::Publish
+D, [2018-10-24T14:39:34.624882 #9591] DEBUG -- Pubnub::Event: #send_request called
+D, [2018-10-24T14:39:34.625190 #9591] DEBUG -- Pubnub::SingleEvent: #request_dispatcher called
+D, [2018-10-24T14:39:34.625313 #9591] DEBUG -- Pubnub::Client: Looking for requester for async single_event
+D, [2018-10-24T14:39:34.626886 #9591] DEBUG -- Pubnub::Event: #send_request got sender
+D, [2018-10-24T14:39:34.696118 #9591] DEBUG -- Pubnub::Event: Requested URI: http://ps.pndsn.com/publish/example/example/0/posts_1/0/%7B%22content%22%3A%22ok%20here%20comes%20the%20error%22%7D?ortt=%7B%22t%22%3A15403721746167690%7D&pnsdk=PubNub-Ruby%2F4.0.28&seqn=8&uuid=a3c12b39-6924-4952-b0e0-1bed455cb1c0
+E, [2018-10-24T14:39:44.771424 #9591] ERROR -- Pubnub::Event: execution expired (HTTPClient::ReceiveTimeoutError)
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:805:in `gets'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:805:in `block in parse_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/2.5.0/timeout.rb:103:in `timeout'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:801:in `parse_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:784:in `read_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:561:in `get_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1299:in `do_get_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1245:in `do_get_block'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1019:in `block in do_request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1133:in `protect_keep_alive_disconnected'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1014:in `do_request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:856:in `request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:743:in `get'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pubnub-4.0.28/lib/pubnub/event.rb:56:in `send_request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pubnub-4.0.28/lib/pubnub/events/publish.rb:33:in `fire'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pubnub-4.0.28/lib/pubnub/client/events.rb:23:in `block (3 levels) in <module:Events>'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/synchronization/mri_lockable_object.rb:38:in `block in synchronize'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/synchronization/mri_lockable_object.rb:38:in `synchronize'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/synchronization/mri_lockable_object.rb:38:in `synchronize'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/safe_task_executor.rb:19:in `execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/ivar.rb:170:in `safe_execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/future.rb:52:in `block in execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+D, [2018-10-24T14:39:44.771785 #9591] DEBUG -- Pubnub::Event: Event#handle
+D, [2018-10-24T14:39:44.772207 #9591] DEBUG -- Pubnub::Event: Firing callbacks for Pubnub::Publish
+D, [2018-10-24T14:39:48.320447 #9591] DEBUG -- Pubnub::Telemetry: Fetching telemetry for l_pub
+D, [2018-10-24T14:39:48.320579 #9591] DEBUG -- Pubnub::Event: Initialized Pubnub::Publish
+D, [2018-10-24T14:39:48.320721 #9591] DEBUG -- Pubnub::Publish: Fired event Pubnub::Publish
+D, [2018-10-24T14:39:48.322344 #9591] DEBUG -- Pubnub::Event: #send_request called
+D, [2018-10-24T14:39:48.323363 #9591] DEBUG -- Pubnub::SingleEvent: #request_dispatcher called
+D, [2018-10-24T14:39:48.389178 #9591] DEBUG -- Pubnub::Client: Looking for requester for async single_event
+D, [2018-10-24T14:39:48.403221 #9591] DEBUG -- Pubnub::Event: #send_request got sender
+D, [2018-10-24T14:39:48.403758 #9591] DEBUG -- Pubnub::Event: Requested URI: http://ps.pndsn.com/publish/example/example/0/posts_1/0/%7B%22content%22%3A%22hello%22%7D?ortt=%7B%22t%22%3A15403721883206158%7D&pnsdk=PubNub-Ruby%2F4.0.28&seqn=9&uuid=a3c12b39-6924-4952-b0e0-1bed455cb1c0
+E, [2018-10-24T14:39:58.578947 #9591] ERROR -- Pubnub::Event: execution expired (HTTPClient::ReceiveTimeoutError)
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:805:in `gets'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:805:in `block in parse_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/2.5.0/timeout.rb:103:in `timeout'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:801:in `parse_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:784:in `read_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:561:in `get_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1299:in `do_get_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1245:in `do_get_block'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1019:in `block in do_request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1133:in `protect_keep_alive_disconnected'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1014:in `do_request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:856:in `request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:743:in `get'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pubnub-4.0.28/lib/pubnub/event.rb:56:in `send_request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pubnub-4.0.28/lib/pubnub/events/publish.rb:33:in `fire'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pubnub-4.0.28/lib/pubnub/client/events.rb:23:in `block (3 levels) in <module:Events>'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/synchronization/mri_lockable_object.rb:38:in `block in synchronize'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/synchronization/mri_lockable_object.rb:38:in `synchronize'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/synchronization/mri_lockable_object.rb:38:in `synchronize'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/safe_task_executor.rb:19:in `execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/ivar.rb:170:in `safe_execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/future.rb:52:in `block in execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+D, [2018-10-24T14:39:58.579249 #9591] DEBUG -- Pubnub::Event: Event#handle
+D, [2018-10-24T14:39:58.579456 #9591] DEBUG -- Pubnub::Event: Firing callbacks for Pubnub::Publish
+D, [2018-10-24T14:41:31.867356 #9591] DEBUG -- Pubnub::Telemetry: Fetching telemetry for l_pub
+D, [2018-10-24T14:41:31.867614 #9591] DEBUG -- Pubnub::Event: Initialized Pubnub::Publish
+D, [2018-10-24T14:41:31.867819 #9591] DEBUG -- Pubnub::Publish: Fired event Pubnub::Publish
+D, [2018-10-24T14:41:31.867932 #9591] DEBUG -- Pubnub::Event: #send_request called
+D, [2018-10-24T14:41:31.876343 #9591] DEBUG -- Pubnub::SingleEvent: #request_dispatcher called
+D, [2018-10-24T14:41:31.884071 #9591] DEBUG -- Pubnub::Client: Looking for requester for async single_event
+D, [2018-10-24T14:41:31.884210 #9591] DEBUG -- Pubnub::Event: #send_request got sender
+D, [2018-10-24T14:41:31.921876 #9591] DEBUG -- Pubnub::Event: Requested URI: http://ps.pndsn.com/publish/example/example/0/posts_1/0/%7B%22content%22%3A%22hello%22%7D?ortt=%7B%22t%22%3A15403722918676944%7D&pnsdk=PubNub-Ruby%2F4.0.28&seqn=10&uuid=a3c12b39-6924-4952-b0e0-1bed455cb1c0
+E, [2018-10-24T14:41:42.106967 #9591] ERROR -- Pubnub::Event: execution expired (HTTPClient::ReceiveTimeoutError)
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:805:in `gets'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:805:in `block in parse_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/2.5.0/timeout.rb:103:in `timeout'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:801:in `parse_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:784:in `read_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:561:in `get_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1299:in `do_get_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1245:in `do_get_block'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1019:in `block in do_request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1133:in `protect_keep_alive_disconnected'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1014:in `do_request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:856:in `request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:743:in `get'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pubnub-4.0.28/lib/pubnub/event.rb:56:in `send_request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pubnub-4.0.28/lib/pubnub/events/publish.rb:33:in `fire'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pubnub-4.0.28/lib/pubnub/client/events.rb:23:in `block (3 levels) in <module:Events>'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/synchronization/mri_lockable_object.rb:38:in `block in synchronize'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/synchronization/mri_lockable_object.rb:38:in `synchronize'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/synchronization/mri_lockable_object.rb:38:in `synchronize'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/safe_task_executor.rb:19:in `execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/ivar.rb:170:in `safe_execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/future.rb:52:in `block in execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+D, [2018-10-24T14:41:42.107218 #9591] DEBUG -- Pubnub::Event: Event#handle
+D, [2018-10-24T14:41:42.107396 #9591] DEBUG -- Pubnub::Event: Firing callbacks for Pubnub::Publish
+D, [2018-10-24T14:42:18.288256 #9591] DEBUG -- Pubnub::Telemetry: Fetching telemetry for l_pub
+D, [2018-10-24T14:42:18.288486 #9591] DEBUG -- Pubnub::Event: Initialized Pubnub::Publish
+D, [2018-10-24T14:42:18.288689 #9591] DEBUG -- Pubnub::Publish: Fired event Pubnub::Publish
+D, [2018-10-24T14:42:18.292852 #9591] DEBUG -- Pubnub::Event: #send_request called
+D, [2018-10-24T14:42:18.292996 #9591] DEBUG -- Pubnub::SingleEvent: #request_dispatcher called
+D, [2018-10-24T14:42:18.293949 #9591] DEBUG -- Pubnub::Client: Looking for requester for async single_event
+D, [2018-10-24T14:42:18.354439 #9591] DEBUG -- Pubnub::Event: #send_request got sender
+D, [2018-10-24T14:42:18.355105 #9591] DEBUG -- Pubnub::Event: Requested URI: http://ps.pndsn.com/publish/example/example/0/posts_1/0/%7B%22content%22%3A%22hello%22%7D?ortt=%7B%22t%22%3A15403723382885770%7D&pnsdk=PubNub-Ruby%2F4.0.28&seqn=11&uuid=a3c12b39-6924-4952-b0e0-1bed455cb1c0
+E, [2018-10-24T14:42:28.422916 #9591] ERROR -- Pubnub::Event: execution expired (HTTPClient::ReceiveTimeoutError)
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:805:in `gets'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:805:in `block in parse_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/2.5.0/timeout.rb:103:in `timeout'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:801:in `parse_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:784:in `read_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:561:in `get_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1299:in `do_get_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1245:in `do_get_block'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1019:in `block in do_request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1133:in `protect_keep_alive_disconnected'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1014:in `do_request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:856:in `request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:743:in `get'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pubnub-4.0.28/lib/pubnub/event.rb:56:in `send_request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pubnub-4.0.28/lib/pubnub/events/publish.rb:33:in `fire'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pubnub-4.0.28/lib/pubnub/client/events.rb:23:in `block (3 levels) in <module:Events>'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/synchronization/mri_lockable_object.rb:38:in `block in synchronize'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/synchronization/mri_lockable_object.rb:38:in `synchronize'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/synchronization/mri_lockable_object.rb:38:in `synchronize'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/safe_task_executor.rb:19:in `execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/ivar.rb:170:in `safe_execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/future.rb:52:in `block in execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+D, [2018-10-24T14:42:28.423217 #9591] DEBUG -- Pubnub::Event: Event#handle
+D, [2018-10-24T14:42:28.423416 #9591] DEBUG -- Pubnub::Event: Firing callbacks for Pubnub::Publish
+D, [2018-10-24T14:43:21.139819 #9591] DEBUG -- Pubnub::Telemetry: Fetching telemetry for l_pub
+D, [2018-10-24T14:43:21.140109 #9591] DEBUG -- Pubnub::Event: Initialized Pubnub::Publish
+D, [2018-10-24T14:43:21.140520 #9591] DEBUG -- Pubnub::Publish: Fired event Pubnub::Publish
+D, [2018-10-24T14:43:21.146132 #9591] DEBUG -- Pubnub::Event: #send_request called
+D, [2018-10-24T14:43:21.146299 #9591] DEBUG -- Pubnub::SingleEvent: #request_dispatcher called
+D, [2018-10-24T14:43:21.146434 #9591] DEBUG -- Pubnub::Client: Looking for requester for async single_event
+D, [2018-10-24T14:43:21.147500 #9591] DEBUG -- Pubnub::Event: #send_request got sender
+D, [2018-10-24T14:43:21.148036 #9591] DEBUG -- Pubnub::Event: Requested URI: http://ps.pndsn.com/publish/example/example/0/posts_1/0/%7B%22content%22%3A%22hello%22%7D?ortt=%7B%22t%22%3A15403724011402018%7D&pnsdk=PubNub-Ruby%2F4.0.28&seqn=12&uuid=a3c12b39-6924-4952-b0e0-1bed455cb1c0
+E, [2018-10-24T14:43:31.269261 #9591] ERROR -- Pubnub::Event: execution expired (HTTPClient::ReceiveTimeoutError)
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:805:in `gets'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:805:in `block in parse_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/2.5.0/timeout.rb:103:in `timeout'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:801:in `parse_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:784:in `read_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:561:in `get_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1299:in `do_get_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1245:in `do_get_block'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1019:in `block in do_request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1133:in `protect_keep_alive_disconnected'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1014:in `do_request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:856:in `request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:743:in `get'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pubnub-4.0.28/lib/pubnub/event.rb:56:in `send_request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pubnub-4.0.28/lib/pubnub/events/publish.rb:33:in `fire'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pubnub-4.0.28/lib/pubnub/client/events.rb:23:in `block (3 levels) in <module:Events>'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/synchronization/mri_lockable_object.rb:38:in `block in synchronize'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/synchronization/mri_lockable_object.rb:38:in `synchronize'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/synchronization/mri_lockable_object.rb:38:in `synchronize'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/safe_task_executor.rb:19:in `execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/ivar.rb:170:in `safe_execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/future.rb:52:in `block in execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+D, [2018-10-24T14:43:31.269513 #9591] DEBUG -- Pubnub::Event: Event#handle
+D, [2018-10-24T14:43:31.269693 #9591] DEBUG -- Pubnub::Event: Firing callbacks for Pubnub::Publish
+D, [2018-10-24T14:49:30.522022 #9591] DEBUG -- Pubnub::Telemetry: Fetching telemetry for l_pub
+D, [2018-10-24T14:49:30.522296 #9591] DEBUG -- Pubnub::Event: Initialized Pubnub::Publish
+D, [2018-10-24T14:49:30.522505 #9591] DEBUG -- Pubnub::Publish: Fired event Pubnub::Publish
+D, [2018-10-24T14:49:30.529612 #9591] DEBUG -- Pubnub::Event: #send_request called
+D, [2018-10-24T14:49:30.529797 #9591] DEBUG -- Pubnub::SingleEvent: #request_dispatcher called
+D, [2018-10-24T14:49:30.529890 #9591] DEBUG -- Pubnub::Client: Looking for requester for async single_event
+D, [2018-10-24T14:49:30.530042 #9591] DEBUG -- Pubnub::Event: #send_request got sender
+D, [2018-10-24T14:49:30.533068 #9591] DEBUG -- Pubnub::Event: Requested URI: http://ps.pndsn.com/publish/example/example/0/posts_1/0/%7B%22content%22%3A%22hrllo%22%7D?ortt=%7B%22t%22%3A15403727705223730%7D&pnsdk=PubNub-Ruby%2F4.0.28&seqn=13&uuid=a3c12b39-6924-4952-b0e0-1bed455cb1c0
+E, [2018-10-24T14:49:40.725998 #9591] ERROR -- Pubnub::Event: execution expired (HTTPClient::ReceiveTimeoutError)
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:805:in `gets'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:805:in `block in parse_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/2.5.0/timeout.rb:103:in `timeout'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:801:in `parse_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:784:in `read_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:561:in `get_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1299:in `do_get_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1245:in `do_get_block'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1019:in `block in do_request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1133:in `protect_keep_alive_disconnected'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1014:in `do_request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:856:in `request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:743:in `get'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pubnub-4.0.28/lib/pubnub/event.rb:56:in `send_request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pubnub-4.0.28/lib/pubnub/events/publish.rb:33:in `fire'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pubnub-4.0.28/lib/pubnub/client/events.rb:23:in `block (3 levels) in <module:Events>'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/synchronization/mri_lockable_object.rb:38:in `block in synchronize'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/synchronization/mri_lockable_object.rb:38:in `synchronize'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/synchronization/mri_lockable_object.rb:38:in `synchronize'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/safe_task_executor.rb:19:in `execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/ivar.rb:170:in `safe_execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/future.rb:52:in `block in execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+D, [2018-10-24T14:49:40.726238 #9591] DEBUG -- Pubnub::Event: Event#handle
+D, [2018-10-24T14:49:40.726415 #9591] DEBUG -- Pubnub::Event: Firing callbacks for Pubnub::Publish
+D, [2018-10-24T14:49:48.356408 #9591] DEBUG -- Pubnub::Telemetry: Fetching telemetry for l_pub
+D, [2018-10-24T14:49:48.356706 #9591] DEBUG -- Pubnub::Event: Initialized Pubnub::Publish
+D, [2018-10-24T14:49:48.357971 #9591] DEBUG -- Pubnub::Publish: Fired event Pubnub::Publish
+D, [2018-10-24T14:49:48.358235 #9591] DEBUG -- Pubnub::Event: #send_request called
+D, [2018-10-24T14:49:48.359073 #9591] DEBUG -- Pubnub::SingleEvent: #request_dispatcher called
+D, [2018-10-24T14:49:48.359188 #9591] DEBUG -- Pubnub::Client: Looking for requester for async single_event
+D, [2018-10-24T14:49:48.359326 #9591] DEBUG -- Pubnub::Event: #send_request got sender
+D, [2018-10-24T14:49:48.360708 #9591] DEBUG -- Pubnub::Event: Requested URI: http://ps.pndsn.com/publish/example/example/0/posts_1/0/%7B%22content%22%3A%22hello%22%7D?ortt=%7B%22t%22%3A15403727883567764%7D&pnsdk=PubNub-Ruby%2F4.0.28&seqn=14&uuid=a3c12b39-6924-4952-b0e0-1bed455cb1c0
+E, [2018-10-24T14:49:58.486458 #9591] ERROR -- Pubnub::Event: execution expired (HTTPClient::ReceiveTimeoutError)
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:805:in `gets'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:805:in `block in parse_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/2.5.0/timeout.rb:103:in `timeout'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:801:in `parse_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:784:in `read_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient/session.rb:561:in `get_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1299:in `do_get_header'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1245:in `do_get_block'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1019:in `block in do_request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1133:in `protect_keep_alive_disconnected'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:1014:in `do_request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:856:in `request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/httpclient-2.8.3/lib/httpclient.rb:743:in `get'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pubnub-4.0.28/lib/pubnub/event.rb:56:in `send_request'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pubnub-4.0.28/lib/pubnub/events/publish.rb:33:in `fire'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/pubnub-4.0.28/lib/pubnub/client/events.rb:23:in `block (3 levels) in <module:Events>'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/synchronization/mri_lockable_object.rb:38:in `block in synchronize'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/synchronization/mri_lockable_object.rb:38:in `synchronize'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/synchronization/mri_lockable_object.rb:38:in `synchronize'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/safe_task_executor.rb:19:in `execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/ivar.rb:170:in `safe_execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/future.rb:52:in `block in execute'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+/home/mindfire/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+D, [2018-10-24T14:49:58.486596 #9591] DEBUG -- Pubnub::Event: Event#handle
+D, [2018-10-24T14:49:58.486684 #9591] DEBUG -- Pubnub::Event: Firing callbacks for Pubnub::Publish
+D, [2018-10-24T15:46:47.128976 #15807] DEBUG -- Pubnub::Telementry: Initialized Telemetry
+D, [2018-10-24T15:46:47.147557 #15807] DEBUG -- Pubnub::Client: Created new Pubnub::Client instance. Version: 4.0.28

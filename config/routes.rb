@@ -13,20 +13,25 @@ Rails.application.routes.draw do
   match '/404',     to: 'errors#not_found',             via: :all
   match '/500',     to: 'errors#internal_server_error', via: :all
   
-  resources :users, except: [:create] do
+  resources :users, except: [:create, :update] do
     member do
       get :following, :followers
+      patch 'update', to: 'users#update', as: :update, path: 'edit'
     end
     collection do
-      post "create", to: "users#create", as: :create
+      post 'create', to: 'users#create', as: :create, path: 'new'
     end
   end
+
   resources :sessions,      only: [:new, :destroy] do
-    post "create" => "sessions#create", as: :create, path: "new", on: :collection
+    collection do
+      post 'create' => 'sessions#create', as: :create, path: 'new'
+    end
   end
+  
   # resources :microposts,    only: [:create, :destroy]
-  post "microposts" => "microposts#create", as: :microposts, path: "/(.:format)"
-  delete "microposts" => "microposts#destroy", as: :micropost, path: "/:id(.:format)"
+  post 'microposts' => 'microposts#create', as: :microposts, path: '/(.:format)'
+  delete 'microposts' => 'microposts#destroy', as: :micropost, path: '/:id(.:format)'
 
   resources :relationships, only: [:create, :destroy]
 

@@ -12,7 +12,7 @@ class UsersController < ApplicationController
   end
 
   def create
-  	@user = User.new(new_user_params)
+  	@user = User.new(user_params)
   	if @user.save
       sign_in @user
   		flash[:success] = "Welcome to the Sample App!"
@@ -40,7 +40,7 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    if @user.update_attributes(update_user_params)
+    if @user.update_attributes(user_params)
       flash[:success] = "Profile update"
       redirect_to @user
     else
@@ -68,12 +68,9 @@ class UsersController < ApplicationController
     render "show_follow"
   end
 
-  private
-  def new_user_params
+  protected
+  def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation, :date_of_birth)
-  end
-  def update_user_params
-  	params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 
   # filters
@@ -81,7 +78,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     unless current_user?(@user)
       redirect_to edit_user_path(current_user)
-      flash[:warning] = "Please edit your account only"
+      flash[:warning] = "You can edit your account only"
     end
   end
 
