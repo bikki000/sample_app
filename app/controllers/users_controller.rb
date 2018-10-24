@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
-  before_action :signed_in_user,  only: [:index, :edit, :update, :destroy]
-  before_action :correct_user,    only: [:edit, :update]
-  before_action :admin_user,      only: :destroy
+  before_action :signed_in_user,          only: [:index, :edit, :update, :destroy]
+  before_action :correct_user,            only: [:edit, :update]
+  before_action :admin_user,              only: :destroy
+  after_action  :send_confirmation_mail,  only: :create
 
   def index
     @users = User.paginate(page: params[:page])
@@ -91,6 +92,12 @@ class UsersController < ApplicationController
       flash[:danger] = "Can not delete account of an admin"
       redirect_to :back
     end
+  end
+
+  def send_confirmation_mail
+    # TO DO send mail asynchronusly using ActiveJob
+    # Then user verification by sending link
+    UserMailer.welcome_email(@user).deliver_now
   end
 
 end
