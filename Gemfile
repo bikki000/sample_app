@@ -29,6 +29,7 @@ gem 'faker'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem 'pubnub'
+gem 'sidekiq', '4.0.0'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
