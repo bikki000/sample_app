@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
-  before_action :signed_in_user,  only: [:index, :edit, :update, :destroy]
-  before_action :correct_user,    only: [:edit, :update]
-  before_action :admin_user,      only: :destroy
+  before_action :signed_in_user,          only: [:index, :edit, :update, :destroy]
+  before_action :correct_user,            only: [:edit, :update]
+  before_action :admin_user,              only: :destroy
 
   def index
     @users = User.paginate(page: params[:page])
@@ -12,10 +12,11 @@ class UsersController < ApplicationController
   end
 
   def create
-  	@user = User.new(user_params)
-  	if @user.save
+  	@user = User.create(user_params)
+  	unless @user.id.nil?
       sign_in @user
   		flash[:success] = "Welcome to the Sample App!"
+      send_welcome_mail
   		redirect_to @user
   	else
   		render 'new'
@@ -91,6 +92,12 @@ class UsersController < ApplicationController
       flash[:danger] = "Can not delete account of an admin"
       redirect_to :back
     end
+  end
+
+  def send_welcome_mail
+    # TO DO send mail asynchronusly using ActiveJob
+    # Then user verification by sending link
+    MailerWorker.perform_async(@user.id)
   end
 
 end

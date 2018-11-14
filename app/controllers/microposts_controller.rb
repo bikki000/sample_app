@@ -10,11 +10,11 @@ class MicropostsController < ApplicationController
 		@userable = current_user
 		@micropost = current_user.microposts.build(micropost_params)
 		if @micropost.save
-			$pubnub.publish(
-				channel: "posts_#{@userable.id}",
-				message: {content: micropost_params[:content]}
-				)
-			puts "\nposts_#{@userable.id}\n\n"
+			# $pubnub.publish(
+			# 	channel: "posts_#{@userable.id}",
+			# 	message: {content: micropost_params[:content]}
+			# 	)
+			# puts "\nposts_#{@userable.id}\n\n"
 			respond_to do |format|
 				format.js { render :nothing => true }
 				format.html do

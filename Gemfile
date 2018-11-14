@@ -29,6 +29,10 @@ gem 'faker'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem 'pubnub'
+gem 'sidekiq', '4.0.0'
+gem 'redis-namespace'
+gem 'mailcatcher'
+gem 'sinatra'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
