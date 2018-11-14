@@ -567,3 +567,5 @@ D, [2018-10-24T14:49:58.486596 #9591] DEBUG -- Pubnub::Event: Event#handle
 D, [2018-10-24T14:49:58.486684 #9591] DEBUG -- Pubnub::Event: Firing callbacks for Pubnub::Publish
 D, [2018-10-24T15:46:47.128976 #15807] DEBUG -- Pubnub::Telementry: Initialized Telemetry
 D, [2018-10-24T15:46:47.147557 #15807] DEBUG -- Pubnub::Client: Created new Pubnub::Client instance. Version: 4.0.28
+D, [2018-11-14T14:19:13.467289 #8757] DEBUG -- Pubnub::Telementry: Initialized Telemetry
+D, [2018-11-14T14:19:13.486475 #8757] DEBUG -- Pubnub::Client: Created new Pubnub::Client instance. Version: 4.0.28

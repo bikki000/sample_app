@@ -1,0 +1,57 @@
+Script started on Thursday 25 October 2018 11:31:31 AM IST
+bash: evalexport PATH="/home/mindfire/.rbenv/shims:${PATH}"
+export RBENV_SHELL=bash
+source '/home/mindfire/.rbenv/libexec/../completions/rbenv.bash'
+command rbenv rehash 2>/dev/null
+rbenv() {
+  local command
+  command="${1:-}"
+  if [ "$#" -gt 0 ]; then
+    shift
+  fi
+
+  case "$command" in
+  rehash|shell)
+    eval "$(rbenv "sh-$command" "$@")";;
+  *)
+    command rbenv "$command" "$@";;
+  esac
+}: No such file or directory
+]0;mindfire@mindfire-u16: ~/Desktop/Practice/rails/sample_app[01;32mmindfire@mindfire-u16[00m:[01;34m~/Desktop/Practice/rails/sample_app[00m$ [K]0;mindfire@mindfire-u16: ~/Desktop/Practice/rails/sample_app[01;32mmindfire@mindfire-u16[00m:[01;34m~/Desktop/Practice/rails/sample_app[00m$ rails[K[K[K[K[Kgit status
+On branch mailer
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mdeleted:    main_console[m
+	[31mmodified:   pubnub.log[m
+	[31mdeleted:    rails_console[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31m2018_10_25_main_console[m
+	[31m2018_10_25_rails_console[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;mindfire@mindfire-u16: ~/Desktop/Practice/rails/sample_app[01;32mmindfire@mindfire-u16[00m:[01;34m~/Desktop/Practice/rails/sample_app[00m$ git status
+On branch mailer
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   .gitignore[m
+	[31mdeleted:    main_console[m
+	[31mmodified:   pubnub.log[m
+	[31mdeleted:    rails_console[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;mindfire@mindfire-u16: ~/Desktop/Practice/rails/sample_app[01;32mmindfire@mindfire-u16[00m:[01;34m~/Desktop/Practice/rails/sample_app[00m$ git a[Kcommit -am ""c"h"a"n"e"s"[1P"[1P"g"e"s"
+[mailer 6d73b8b] changes
+ 4 files changed, 7 insertions(+), 262 deletions(-)
+ delete mode 100644 main_console
+ delete mode 100644 rails_console
+]0;mindfire@mindfire-u16: ~/Desktop/Practice/rails/sample_app[01;32mmindfire@mindfire-u16[00m:[01;34m~/Desktop/Practice/rails/sample_app[00m$ rails  [Kg [K[K[K[K[K[K[K[Kexit
+exit
+
+Script done on Thursday 25 October 2018 12:22:31 PM IST
